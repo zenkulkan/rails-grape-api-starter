@@ -3,8 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.0'
 
+gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 7.1.3'
-gem 'rack-cors', :require => 'rack/cors'
 
 # Database
 gem 'pg', '~> 1.4'
@@ -30,8 +30,8 @@ gem 'sidekiq-cron', '~> 2.0', '>= 2.0.1'
 gem 'sidekiq-unique-jobs', '~> 8.0', '>= 8.0.10'
 
 # Optional gems for monitoring and error tracking
-gem 'newrelic_rpm', '~> 8.10', require: false  # New Relic APM (Application Performance Monitoring)
-gem 'sentry-rails', '~> 5.7', require: false    # Sentry error tracking
+gem 'newrelic_rpm', '~> 8.10', require: false # New Relic APM (Application Performance Monitoring)
+gem 'sentry-rails', '~> 5.7', require: false # Sentry error tracking
 
 # Pagination
 gem 'kaminari'
@@ -43,7 +43,7 @@ gem 'pundit'
 gem 'httparty'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
+gem 'bootsnap', require: false
 
 # grape api
 gem 'grape'
@@ -66,14 +66,14 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'shoulda-matchers' # For convenient model testing
+  gem 'pry', '~> 0.14.2'
+  gem 'rspec-rails'
+  gem 'rspec-sidekiq', '~> 5.0'
   gem 'rubocop', require: false
   gem 'rubocop-rspec'
+  gem 'shoulda-matchers' # For convenient model testing
   gem 'webmock'
-  gem 'pry', '~> 0.14.2'
-  gem 'rspec-sidekiq', '~> 5.0'
-  gem 'dotenv-rails'
 end
