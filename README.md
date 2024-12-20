@@ -92,7 +92,6 @@ rails-grape-api-starter
     * Services: `spec/services/`
     * Jobs/Workers: `spec/jobs/`
 
-
 ## Environment Variables
 
 | Variable              | Comment                                             |
@@ -120,48 +119,6 @@ rails-grape-api-starter
 | `MAILER_USER_NAME`    | Username for your email account                      |
 | `MAILER_PASSWORD`     | Password for your email account                      |
 | `MAILER_AUTHENTICATION`| Authentication method (e.g., 'plain', 'login')       |
-
-## Project Structure
-```
-.
-├── app/
-│   ├── api/
-│   ├── jobs/
-│   ├── mailers/
-│   ├── models/
-│   ├── queries/
-│   ├── services/
-│   └── ... (other potential directories)
-├── config/
-│   ├── initializers/
-│   │   └── sidekiq.rb
-│   ├── environments/
-│   │   ├── development.rb
-│   │   ├── production.rb
-│   │   └── test.rb
-│   ├── storage.yml
-│   └── ... (other potential configuration files)
-├── db/
-│   ├── migrate/
-│   └── ... (other potential database-related directories)
-├── lib/
-│   └── tasks/
-├── spec/
-│   ├── api/
-│   ├── factories/
-│   ├── jobs/
-│   ├── models/
-│   ├── queries/
-│   ├── services/
-│   ├── support/
-│   │   └── factory_bot.rb
-│   ├── spec_helper.rb
-│   └── rails_helper.rb
-├── Gemfile
-├── Gemfile.lock
-├── README.md
-└── ... (other potential files, such as .gitignore, Procfile, etc.)
-```
 
 **Key Features**
 
